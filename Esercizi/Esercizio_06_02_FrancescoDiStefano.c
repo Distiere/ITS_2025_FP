@@ -9,12 +9,12 @@ Definisca questa matrice 3x4 di numeri in virgola mobile (float) e la inizializz
   5.5   9.9  −13.7
 
 Calcoli e stampi:
-La somma di tutti i numeri positivi presenti nella matrice.
-La somma di tutti i numeri negativi presenti nella matrice.
-Il valore massimo e il valore minimo della matrice.
-Il numero di elementi pari e il numero di elementi dispari (considerando solo la parte intera del numero).
-Stampi un messaggio se tutti i numeri nella matrice sono positivi o tutti negativi.
-Stampi un messaggio se almeno un numero è multiplo di 5 (considerando solo la parte intera del numero).
+  La somma di tutti i numeri positivi presenti nella matrice.
+  La somma di tutti i numeri negativi presenti nella matrice.
+  Il valore massimo e il valore minimo della matrice.
+  Il numero di elementi pari e il numero di elementi dispari (considerando solo la parte intera del numero).
+  Stampi un messaggio se tutti i numeri nella matrice sono positivi o tutti negativi.
+  Stampi un messaggio se almeno un numero è multiplo di 5 (considerando solo la parte intera del numero).
 */
 
 #include <stdio.h>
@@ -23,9 +23,28 @@ Stampi un messaggio se almeno un numero è multiplo di 5 (considerando solo la p
 int main(){
     float matrix [ROWS][COLS] =
     {
-        {1.5 , −6.8, 10.0},
-        {−3.2, 7.1, −11.3},
-        {4.0, −8.4, 12.6},
-        {5.5, 9.9, −13.7}
+        {1.5 , -6.8, 10.0},
+        {-3.2, 7.1, -11.3},
+        {4.0, -8.4, 12.6},
+        {5.5, 9.9, -13.7}
     };
+    // La somma di tutti i numeri positivi presenti nella matrice
+    float sum = 0;
+    for ( int i = 0 ; i < ROWS; i++ ){
+      for( int j = 0; j < COLS; ++j ){
+        float f = matrix[i][j];
+        if( f >= 0 ){
+          // il numero è positivo
+          sum = sum + f;
+        }
+
+      }
+    }
+    printf("\n=== SOMMA VALORI POSITIVI ===\n\n");
+    printf("somma: %f", sum);
+
+    printf("\n\n");
+
+
+    return 0;
 }
