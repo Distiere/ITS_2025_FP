@@ -21,8 +21,6 @@ int main(){
     printf("6. Potenza (^)\n");
     printf("7. Test di tutte le funzioni\n");
     printf("8. Esci\n");
-    /*printf("Scegli un'operazione (1-8): ");
-    scanf("%d", &sceltaUtente);*/
     //uso di blocco switch per determinare la casistica e quindi richiamo di funzioni matematiche
     do
         {printf("Scegli un'operazione (1-8): ");
