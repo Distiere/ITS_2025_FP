@@ -2,7 +2,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
-
+/*robert.pahontu@edu-its.it*/
 
 int main() {
     char parole[][20] = {"elephant", "banana", "computer", "galaxy", "puzzle", "giraffe"};
