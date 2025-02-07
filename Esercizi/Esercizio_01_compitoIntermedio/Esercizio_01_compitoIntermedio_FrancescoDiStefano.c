@@ -8,6 +8,7 @@ int main(){
     //dichiarazione e scansione di variabili da far inserire all'utente
     int sceltaUtente;
     int num1, num2;
+    int numeri[] = {2, 4, 6, 8, 10};  
     float risultato;
     //stampa del menù per utente
     printf("\nBenvenuto, scegli una delle operazioni disponibili con un numero da 1 a 8 e successivamente i numeri con cui fare l'operazione\n");
@@ -20,11 +21,12 @@ int main(){
     printf("6. Potenza (^)\n");
     printf("7. Test di tutte le funzioni\n");
     printf("8. Esci\n");
-    printf("Scegli un'operazione (1-8): ");
-    scanf("%d", &sceltaUtente);
+    /*printf("Scegli un'operazione (1-8): ");
+    scanf("%d", &sceltaUtente);*/
     //uso di blocco switch per determinare la casistica e quindi richiamo di funzioni matematiche
     do
-        {
+        {printf("Scegli un'operazione (1-8): ");
+         scanf("%d", &sceltaUtente);
             switch (sceltaUtente) {
                 case 1:
                     printf("Inserisci il primo numero: ");
@@ -72,6 +74,7 @@ int main(){
                     printf("Risultato: %d\n", power(num1, num2));
                     break;
                 case 7:
+                    test_all_operations(numeri, sizeof(numeri) / sizeof(numeri[0]));
                     printf("Inserisci il primo numero: ");
                     scanf("%d", &num1);
                     printf("Inserisci il secondo numero: ");

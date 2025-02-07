@@ -35,3 +35,20 @@ int power(int base, int esp) {
     }
     return result;
 }
+void test_all_operations(int arr[], int size) {
+    printf("Test delle operazioni sui numeri {");
+    for (int i = 0; i < size; i++) {
+        printf("%d", arr[i]);
+        if (i < size - 1) printf(", ");
+    }
+    printf("}:\n");
+
+    for (int i = 0; i < size - 1; i++) {
+        printf("%d + %d = %d\n", arr[i], arr[i + 1], add(arr[i], arr[i + 1]));
+        printf("%d - %d = %d\n", arr[i], arr[i + 1], sub(arr[i], arr[i + 1]));
+        printf("%d * %d = %d\n", arr[i], arr[i + 1], mul(arr[i], arr[i + 1]));
+        printf("%d / %d = %.2f\n", arr[i], arr[i + 1], divi(arr[i], arr[i + 1]));
+        printf("%d %% %d = %d\n", arr[i], arr[i + 1], mod(arr[i], arr[i + 1]));
+        printf("%d ^ %d = %d\n", arr[i], arr[i + 1], power(arr[i], arr[i + 1]));
+    }
+}
